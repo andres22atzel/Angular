@@ -1,0 +1,30 @@
+<div class="clock">
+  <div></div>
+  <div  class="posicion-central" #posicionCentral >
+    <div class="hour-hand" #hourHand></div>
+    <div class="minute-hand" #minuteHand></div>
+    <div class="second-hand" #secondHand></div>
+  </div>
+</div>
+<div class="clockContainer">
+  <p id="horas">{{horasText}}</p>
+  <p id="minutos">{{minutosText}}</p>
+  <p id="segundos">{{segundosText}}</p>
+  <p id="milisegundos">{{milisegundosText}}</p>
+</div>
+<div class="buttonsContainer">
+  <button #comenzar (click)="start()">Empezar <img src="../../../assets/img/play.svg" alt="" /></button>
+  <button #parar (click)="stop()" class="disabled">
+    Parar <img src="../../../assets/img/stop.svg" alt="" />
+  </button>
+  <button #guardar (click)="save()" class="disabled">
+    Guardar <img src="../../../assets/img/save.svg" alt="" />
+  </button>
+  <button #reiniciar (click)="restart()" class="disabled">
+    Reiniciar <img src="../../../assets/img/restart.svg" alt="" />
+  </button>
+  <button #borrar (click)="erase()" class="disabled">
+    Borrar <img src="../../../assets/img/erase.svg" alt="" />
+  </button>
+</div>
+<div #tiempos class="saveTimes"></div>
