@@ -1,0 +1,52 @@
+<main>
+  <h1>Filtro de imágenes</h1>
+  <div class="botones">
+      <button (click)="mostrar(0)">Todos</button>
+      <button (click)="mostrar(2)">Tierra</button>
+      <button (click)="mostrar(3)">Agua</button>
+      <button (click)="mostrar(1)">Fuego</button>
+  </div>
+  <div class="images">
+      <div class="fuego" *ngIf ="showFuego">
+          <div (click)="verModal($event)">
+              <h2 class="ver">Ver</h2>
+          </div>
+          <img src={{imagesSrc[0]}} alt="fogata" name="image1">
+      </div>
+      <div class="tierra" *ngIf ="showTierra">
+          <div>
+              <h2 class="ver">Ver</h2>
+          </div>
+          <img src={{imagesSrc[1]}} alt="tierra" name="image2">
+      </div>
+      <div class="fuego" *ngIf ="showFuego">
+          <div>
+              <h2 class="ver">Ver</h2>
+          </div>
+          <img src={{imagesSrc[2]}} alt="anillo fuego" name="image3">
+      </div>
+      <div class="agua" *ngIf ="showAgua">
+          <div>
+              <h2 class="ver">Ver</h2>
+          </div>
+          <img src={{imagesSrc[3]}} alt="gota de agua" name="image4">
+      </div>
+      <div class="agua" *ngIf ="showAgua">
+          <div>
+              <h2 class="ver">Ver</h2>
+          </div>
+          <img src={{imagesSrc[4]}} alt="tuvos de agua" name="image5">
+      </div>
+      <div class="agua" *ngIf ="showAgua">
+          <div>
+              <h2 class="ver">Ver</h2>
+          </div>
+          <img src={{imagesSrc[5]}} alt="ola" name="image6">
+      </div>   
+  </div>
+  <div class={{classModal}} (click)="modal()">
+      <div id="modalImage">
+        <img src={{sourceImageModal}}>
+      </div>
+  </div>
+</main>
