@@ -49,8 +49,8 @@ export class GridImagesNatureComponent implements OnInit {
 
   verModal(event:any){
     this.eventModal = event;
-    console.log(this.eventModal.path[1].nextSibling.src);
-    this.sourceImageModal = this.eventModal.path[1].nextSibling.src;
+    // console.log(this.eventModal.path[0].parentElement.nextSibling.src);
+    this.sourceImageModal = this.eventModal.path[0].parentElement.nextSibling.src;
     if(this.flagModal === false){
       this.classModal = "modal showModal"
       this.flagModal = true;

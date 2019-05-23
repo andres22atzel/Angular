@@ -8,38 +8,38 @@
   </div>
   <div class="images">
       <div class="fuego" *ngIf ="showFuego">
-          <div (click)="verModal($event)">
-              <h2 class="ver">Ver</h2>
+          <div>
+              <h2 (click)="verModal($event)" class="ver">Ver</h2>
           </div>
           <img src={{imagesSrc[0]}} alt="fogata" name="image1">
       </div>
       <div class="tierra" *ngIf ="showTierra">
           <div>
-              <h2 class="ver">Ver</h2>
+              <h2 (click)="verModal($event)" class="ver">Ver</h2>
           </div>
           <img src={{imagesSrc[1]}} alt="tierra" name="image2">
       </div>
       <div class="fuego" *ngIf ="showFuego">
           <div>
-              <h2 class="ver">Ver</h2>
+              <h2 (click)="verModal($event)" class="ver">Ver</h2>
           </div>
           <img src={{imagesSrc[2]}} alt="anillo fuego" name="image3">
       </div>
       <div class="agua" *ngIf ="showAgua">
           <div>
-              <h2 class="ver">Ver</h2>
+              <h2 (click)="verModal($event)" class="ver">Ver</h2>
           </div>
           <img src={{imagesSrc[3]}} alt="gota de agua" name="image4">
       </div>
       <div class="agua" *ngIf ="showAgua">
           <div>
-              <h2 class="ver">Ver</h2>
+              <h2 (click)="verModal($event)" class="ver">Ver</h2>
           </div>
           <img src={{imagesSrc[4]}} alt="tuvos de agua" name="image5">
       </div>
       <div class="agua" *ngIf ="showAgua">
           <div>
-              <h2 class="ver">Ver</h2>
+              <h2 (click)="verModal($event)" class="ver">Ver</h2>
           </div>
           <img src={{imagesSrc[5]}} alt="ola" name="image6">
       </div>   

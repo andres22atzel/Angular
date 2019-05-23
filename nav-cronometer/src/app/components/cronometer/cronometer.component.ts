@@ -38,7 +38,9 @@ export class CronometerComponent implements OnInit, AfterViewInit, OnDestroy {
   grados = 0;
 
   constructor(private renderer: Renderer2) {}
-  ngOnInit() {}
+  ngOnInit() {
+    this.centro(this.hourHand)
+  }
 
   ngAfterViewInit() {
     // this.renderer.setStyle(this.hourHand.nativeElement, "top", '8px');
@@ -205,17 +207,17 @@ export class CronometerComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  // centro(item: ElementRef) {
-  //   let elementoCentro = this.renderer
-  //     .selectRootElement(this.posicionCentral.nativeElement)
-  //     .getBoundingClientRect();
-  //   let elementoCentroAnchura = elementoCentro.height;
-  //   let clockHand = this.renderer
-  //     .selectRootElement(item.nativeElement)
-  //     .getBoundingClientRect();
-  //   let clockHandAltura = clockHand.width;
-  //   let centroTop = (elementoCentroAnchura - clockHandAltura) / 2;
-  //   console.log(centroTop);
-  //   this.renderer.setStyle(item.nativeElement, "top", '8px');
-  //}
+  centro(item: ElementRef) {
+    let elementoCentro = this.renderer
+      .selectRootElement(this.posicionCentral.nativeElement)
+      .getBoundingClientRect();
+    let elementoCentroAnchura = elementoCentro.height;
+    let clockHand = this.renderer
+      .selectRootElement(item.nativeElement)
+      .getBoundingClientRect();
+    let clockHandAltura = clockHand.width;
+    let centroTop = (elementoCentroAnchura - clockHandAltura) / 2;
+    console.log(centroTop);
+    this.renderer.setStyle(item.nativeElement, "top", centroTop+"px");
+  }
 }
