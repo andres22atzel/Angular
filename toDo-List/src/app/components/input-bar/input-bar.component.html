@@ -1,0 +1,93 @@
+<div id="activityInputContainer">
+  <div id="activityInput">
+    <input
+      type="text"
+      id="activity"
+      placeholder="{{ placeHolder }}"
+      (keyup)="introduceActivity($event)"
+    />
+    <button id="addBtn"><i class="fas fa-plus"></i></button>
+  </div>
+</div>
+<div id="toDoContainer">
+  <h1>Tareas por hacer</h1>
+  <div id="toDoActivitiesContainer">
+    <div class="toDoActivity flex" *ngFor="let activity of toDoActivities">
+      <p>{{ activity }}</p>
+      <div class="options">
+        <button class="delete" (click)="deleteActivity(activity,1)">
+          <i class="far fa-trash-alt"></i>
+          <span class="tooltiptext">Borrar</span>
+        </button>
+        <button class="inProcess" (click)="inProcess(activity)">
+          <i class="fas fa-sync-alt"></i
+          ><span class="tooltiptext">En Proceso</span>
+        </button>
+        <button class="done" (click)="done()">
+          <i class="far fa-check-circle"></i
+          ><span class="tooltiptext">Completado</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div id="inProcessContainer">
+  <h1>Tareas en proceso</h1>
+  <div id="inProcessActivitiesContainer">
+    <div class="toDoActivity flex" *ngFor="let activity of inProcessActivities">
+      <p>{{ activity }}</p>
+      <div class="options">
+        <button class="delete" (click)="deleteActivity(activity,2)">
+          <i class="far fa-trash-alt"></i>
+          <span class="tooltiptext">Borrar</span>
+        </button>
+        <button class="inProcess" (click)="inProcess()">
+          <i class="fas fa-sync-alt"></i
+          ><span class="tooltiptext">En Proceso</span>
+        </button>
+        <button class="done" (click)="done()">
+          <i class="far fa-check-circle"></i
+          ><span class="tooltiptext">Completado</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div id="doneContainer">
+  <h1>Tareas Completadas</h1>
+  <div id="doneActivitiesContainer">
+    <div class="toDoActivity flex" *ngFor="let activity of doneActivities">
+      <p>{{ activity }}</p>
+      <div class="options">
+        <button class="delete" (click)="deleteActivity(activity,3)">
+          <i class="far fa-trash-alt"></i>
+          <span class="tooltiptext">Borrar</span>
+        </button>
+        <button class="inProcess" (click)="inProcess()">
+          <i class="fas fa-sync-alt"></i
+          ><span class="tooltiptext">En Proceso</span>
+        </button>
+        <button class="done" (click)="done()">
+          <i class="far fa-check-circle"></i
+          ><span class="tooltiptext">Completado</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- let typeActivity:string;
+let typeActivities:string[] = [];
+if(type === 1){
+  typeActivity = "toDoActivities";
+  typeActivities = this.toDoActivities;
+}else if(type === 2){
+  typeActivity = "inProcessActivities";
+  typeActivities = this.inProcessActivities;
+}else if(type === 3){
+  typeActivity = "doneActivities";
+  typeActivities = this.doneActivities;
+} -->
