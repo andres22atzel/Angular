@@ -7,18 +7,25 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { NavegadorComponent } from './components/navegador/navegador.component';
-
+import { TodolistComponent } from './components/todolist/todolist.component';
+import {FormsModule} from '@angular/forms';
+import { PokedexComponent } from './components/pokedex/pokedex.component'
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactComponent,
     ServiciosComponent,
-    NavegadorComponent
+    NavegadorComponent,
+    TodolistComponent,
+    PokedexComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

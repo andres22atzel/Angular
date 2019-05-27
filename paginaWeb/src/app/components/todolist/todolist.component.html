@@ -1,0 +1,35 @@
+<div id="activityInputContainer">
+  <div id="activityInput">
+    <input
+      type="text"
+      id="activity"
+      placeholder="{{ placeHolder }}"
+      [(ngModel)]="entradaTexto"
+    />
+    <button id="addBtn" (click)="addTask()"><i class="fas fa-plus"></i></button>
+  </div>
+</div>
+
+<div id="{{container.name}}" *ngFor="let container of containers">
+  <h1>Tareas por hacer</h1>
+  <div id="{{container.childContainer}}">
+    <div class="{{container.typeActivity}} flex" *ngFor="let activity of container.activityArray">
+      <p>{{ activity }}</p>
+      <div class="options">
+        <button class="delete" (click)="deleteActivity(activity,1)">
+          <i class="far fa-trash-alt"></i>
+          <span class="tooltiptext">Borrar</span>
+        </button>
+        <button class="inProcess" (click)="inProcess(activity)" *ngIf="container.id === 1">
+          <i class="fas fa-sync-alt"></i
+          ><span class="tooltiptext">En Proceso</span>
+        </button>
+        <button class="done" (click)="done()">
+          <i class="far fa-check-circle"></i
+          ><span class="tooltiptext">Completado</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <hr *ngIf="container.id < 3"/>
+</div>

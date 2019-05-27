@@ -1,48 +1,66 @@
-#activityInputContainer {
-  background-color: #2a5ce8;
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+*{margin:0;padding:0;border:0;outline:0;box-sizing:border-box}
 
-  #activityInput {
-    width: 97%;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-    #activity {
-      /*input*/
-      border-radius: 8px 30px 30px 8px;
-      width: 100%;
-      height: 100%;
-      font-size: 1.5rem;
-      padding-left: 1rem;
-      background-color: #2e9cff;
-      color: white;
-   }
-    #addBtn {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      cursor: pointer;
-
-      :hover {
-        background-color: #e2e6df;
-      }
-
-      .fa-plus {
-        font-size: 1.3rem;
-      }
-    }
-  }
+body{
+    font-family:"roboto";
+    font-size:16px;
 }
+
+h1{
+    font-size: 1.5rem;
+    padding:1.5rem 0rem 1rem 0rem;
+}
+
+#activityInputContainer{
+    background-color: #2A5CE8;
+    width:100%;
+    height:10vh;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#activityInput{
+    width:97%;
+    height:3rem;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    position: relative;
+}
+
+#activity{ /*input*/
+    border-radius: 8px 30px 30px 8px;
+    width:100%;
+    height:100%;
+    font-size: 1.5rem;
+    padding-left:1rem;
+    background-color:#2E9CFF;
+    color:white;
+}
+
+input::placeholder{
+    color:white;
+    font-size: 1.3rem;
+}
+
+#addBtn{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+#addBtn:hover{
+    background-color:#E2E6DF;
+}
+
+.fa-plus{
+    font-size:1.3rem;
+}
+
 
 .fa-trash-alt, .fa-check-circle, .fa-sync-alt{
     font-size:1.5rem;
@@ -145,6 +163,12 @@
     margin-top:0.5rem;
 }
 
+p{
+    font-size: 1rem;
+    font-weight:bold;
+    color: #626780;
+}
+
 #doneActivitiesContainer p{
     text-decoration-line: line-through;
 }
@@ -158,6 +182,13 @@
 
 .toDoActivity .options{
     width:5.4rem;
+}
+
+hr{
+    width: 100%;
+    height: 2px;
+    background-color:black;
+    margin-top: 1rem;
 }
 
 #toDoContainer, #doneContainer, #inProcessContainer{
