@@ -10,7 +10,8 @@ import { NavegadorComponent } from './components/navegador/navegador.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
 import {FormsModule} from '@angular/forms';
 import { PokedexComponent } from './components/pokedex/pokedex.component'
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import {HttpClientModule} from '@angular/common/http'
     ServiciosComponent,
     NavegadorComponent,
     TodolistComponent,
-    PokedexComponent
+    PokedexComponent,
+    PokemonDetailComponent
   ],
   imports: [
     BrowserModule,

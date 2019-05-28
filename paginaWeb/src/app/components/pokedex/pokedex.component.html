@@ -1,1 +1,20 @@
-<h1>Pokedex({{numPokemon}})</h1>
+<h1>Pokedex({{ numPokemon }})</h1>
+<div id="gridPokemon">
+  <div class="card" *ngFor="let pokemon of listaPokemon">
+    {{ pokemon.name }}
+  </div>
+</div>
+<button
+  class="btn btn-info"
+  (click)="getPreviousPagePokemon()"
+  [disabled]="previousUrl == null"
+>
+  Anterior
+</button>
+<button
+  class="btn btn-warning"
+  (click)="getNextPagePokemon()"
+  [disabled]="nextUrl == null"
+>
+  Siguiente
+</button>
