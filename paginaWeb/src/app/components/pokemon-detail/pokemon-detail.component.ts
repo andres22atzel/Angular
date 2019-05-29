@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { PokeapiService } from "../../service/pokeapi.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-pokemon-detail",
@@ -9,15 +10,27 @@ import { PokeapiService } from "../../service/pokeapi.service";
 export class PokemonDetailComponent implements OnInit {
   public pokemon: any;
   public nombrePokemon: string;
-  constructor(private pokeService: PokeapiService) {
+  public nombrePokemonAPedir: any;
+  constructor(
+    private pokeService: PokeapiService,
+    private route: ActivatedRoute
+  ) {
     this.pokemon = { name: "", sprites: { front_default: "" } };
   }
 
   ngOnInit() {
-    this.getIndividualPokemon();
+    this.route.params.subscribe(
+      parametros => {
+        console.log("Parametros de ruta");
+        console.log(parametros);
+        this.nombrePokemonAPedir = parametros.nombrePokemon;
+        this.getIndividualPokemon();
+      },
+      error => {}
+    );
   }
   getIndividualPokemon() {
-    this.pokeService.getPokemonDetail("necrozma").subscribe(
+    this.pokeService.getPokemonDetail(this.nombrePokemonAPedir).subscribe(
       res => {
         console.log("res");
         console.log(res);

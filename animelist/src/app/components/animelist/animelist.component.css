@@ -1,0 +1,19 @@
+#gridCharacters{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    width:100%;
+}
+
+.card{
+    margin: 15px 15px;
+    padding: 20px 20px;
+    font-size: 20px;
+    width:30%;
+    height:100px;
+}
+
+.btn{
+    margin: 15px 15px;
+    padding: 15px 30px;
+}

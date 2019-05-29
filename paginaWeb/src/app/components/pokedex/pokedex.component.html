@@ -1,6 +1,6 @@
 <h1>Pokedex({{ numPokemon }})</h1>
 <div id="gridPokemon">
-  <div class="card" *ngFor="let pokemon of listaPokemon">
+  <div class="card" *ngFor="let pokemon of listaPokemon" [routerLink]="['/pokemon/'+ pokemon.name]">
     {{ pokemon.name }}
   </div>
 </div>

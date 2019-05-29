@@ -1,0 +1,20 @@
+<h1>Rick & Morty({{ numCharacters }})</h1>
+<div id="gridCharacters">
+  <div class="card" *ngFor="let character of characterList">
+    {{ character.name }}
+  </div>
+</div>
+<button
+  class="btn btn-info"
+  (click)="getPreviousPageCharacters()"
+  [disabled]="prevUrl == ''"
+>
+  Anterior
+</button>
+<button
+  class="btn btn-warning"
+  (click)="getNextPageCharacters()"
+  [disabled]="nextUrl == null"
+>
+  Siguiente
+</button>
